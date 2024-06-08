@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Özlem Tekin müziğe geri döndü mü?</title>
+    <script type="application/javascript">
+
+        const videoIds = ['_deEqA9gAG0',
+            '2h3OIZvjT1A',
+            'YTzQnjK2DGg',
+            '8owRZC3d60k',
+            'uImtw2kQmy4',
+            'qJ1iBHvhuMs',
+            'bOca_Ftq1jA',
+            'V4AM650KdHw',
+            'tAM3G6KJ-JE',
+            't0JypsaIfZM',
+            '_otWWK468as',
+            'THJC5ND0ZFg',
+            '0o4p-l0Erf4',
+            'V7ulYxruxxo',
+            '4fKMauBuVCU',
+            'eMf0jNbUqiQ',
+            'Ld7TWy83q7Q',
+            'LceKWSjS3Uw',
+            'LVo07YYMUH8',
+            'ZMaHn82YOlw',
+            '1HR8v3Qpsl4',
+            '9bKqkioyLsI',
+            'SafqU0408OM',
+            '3Ofwbv3NqbA',
+            'xWCCC0RQieU',
+            'EcYYo0qHzLs',
+            'Hy2DKAtk5QI',
+            'pEVlaTrd2Es',
+            'eLZdG23evbA',
+            'fi5JphdswUI',
+            'wPuq2CwjoPo',
+            'urQ-FY0CTgc',
+            'NlOh2doWLJk',
+            'CmJkpbkL5uc',
+            '1f-2nDpcKpk',
+            'Teu6_tJYKQ8',
+            '6XqBKIJTRpA',
+            'kYCt7mh5Zts',
+            'nOt_iwGNatA',
+            'MI2HrITkN2U',
+            'rQfv6t9FJWk',
+            'IMfDOvd601Y',
+            '08jvLzxBXqk',
+            'ADvGTvsJdVA',
+            'huE5pyZQXeE',
+            'n9k55jPNMyA',
+            '2FeSdY6yngI',
+            'dav14ZTktx0',
+            'I-GRsr3g-mQ',
+            '3R-jmc5DoSk',
+            'MuUozNbF500',
+            'raA8NfwS2sA',
+            'OKhx5Jq1Hjs',
+            '4sfoBX8xiDg',
+            'MnSdBmJW5qM',
+            'W1NdNO00PD8',
+            'g3NaRnyghuE',
+            '_YBC4rcbedU',
+            '2vlQ_FuJQj4',
+            '4K3Nrd5qzqM',
+            '7GGm1ysheC8',
+            'aB812QenO2s',
+            '0dcyyXheBI4',
+            'UPGfJyjXSDs',
+            '6MdEVlKRQFs',
+            'yJtvAVeqSIU',
+            'KPH8kcSvOpU',
+            'MfZ4yw3gdBg',
+            'kdQpt0_-P_o',
+            's7ffYMxuDok',
+            'PSeZpmVMqfw',
+            'M4MxXGHrPtg'];
+
+        const width = window.innerWidth;
+
+        let embedWidth = 640;
+
+        if (width <= 680 && width > 360) {
+            embedWidth = 480;
+        } else if (width <= 360) {
+            embedWidth = 240;
+        }
+
+        const createEmbed = (id) => {
+            document.getElementById("video").innerHTML = ' <iframe width="' + embedWidth + '" height="' + (embedWidth * 9 / 16)  +'" src="https://www.youtube.com/embed/' + id + '" title = "YouTube video player"frameBorder = "0"allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"referrerPolicy = "strict-origin-when-cross-origin"allowFullScreen > < /iframe>'
+        }
+
+        const now = new Date();
+        const fullDaysSinceEpoch = Math.floor(now / 8.64e7);
+        const todaysVideoId = (fullDaysSinceEpoch % videoIds.length) - 1;
+
+        const loadVideo = () => createEmbed(videoIds[todaysVideoId]);
+
+
+    </script>
+</head>
+<body onload=loadVideo()>
+
+<body class="grey darken-4">
+
+<div class="container" style="text-align: center;">
+    <br/><br/><br/>
+    <p>
+    <h1 class="white-text">Özlem Tekin müziğe geri döndü mü?</h1>
+    </p>
+    <br/>
+    <p>
+    <h3 class="orange-text lighten-5">Maalesef hayır :/</h3>
+    <br/>
+    <h4 class="white-text lighten-5">Günün Özlem Tekin şarkısı:</h4>
+    </p>
+    <div id="video">
+    </div>
+    <br/>
+
+</div>
+
+</body>
+</html>
