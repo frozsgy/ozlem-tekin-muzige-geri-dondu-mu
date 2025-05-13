@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N0B5KSJBPT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N0B5KSJBPT');
+</script>
+
     <meta charset="UTF-8">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,8 +37,8 @@
             "fi5JphdswUI",
             "EcYYo0qHzLs",
             "ADvGTvsJdVA",
+            "kYdHNrGox0I",
             "wPuq2CwjoPo",
-            "Teu6_tJYKQ8",
             "qJ1iBHvhuMs",
             "dav14ZTktx0",
             "Ld7TWy83q7Q",
@@ -43,6 +54,7 @@
             "I-GRsr3g-mQ",
             "urQ-FY0CTgc",
             "bOca_Ftq1jA",
+            "Teu6_tJYKQ8",
             "3R-jmc5DoSk",
             "YTzQnjK2DGg",
             "eLZdG23evbA",
@@ -84,16 +96,17 @@
             "kdQpt0_-P_o",
             "PSeZpmVMqfw",
             "s7ffYMxuDok",
-            "M4MxXGHrPtg"
+            "M4MxXGHrPtg",
+
         ]
 
         const createEmbed = (id) => {
-            document.getElementById("video").innerHTML = ' <iframe src="https://www.youtube.com/embed/' + id + '" title = "YouTube video player"frameBorder = "0"allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"referrerPolicy = "strict-origin-when-cross-origin"allowFullScreen > < /iframe>'
+            document.getElementById("video").innerHTML = ' <iframe src="https://www.youtube.com/embed/' + id + '" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>'
         }
 
         const now = new Date();
         const fullDaysSinceEpoch = Math.floor(now / 8.64e7);
-        const todaysVideoId = (fullDaysSinceEpoch % videoIds.length) - 1;
+        const todaysVideoId = fullDaysSinceEpoch % videoIds.length;
 
         const loadVideo = () => createEmbed(videoIds[todaysVideoId]);
 
@@ -128,9 +141,7 @@
 
     </style>
 </head>
-<body onload=loadVideo()>
-
-<body class="grey darken-4">
+<body onload=loadVideo() class="grey darken-4">
 
 <div class="container" style="text-align: center;">
     <br/><br/><br/>
